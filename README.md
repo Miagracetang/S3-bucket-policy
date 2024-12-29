@@ -1,2 +1,16 @@
-# S3-bucket-policy
-S3-bucket-policy without CloudFront
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "PublicReadGetObject",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": [
+			    "s3:GetObject"
+			],
+			"Resource": [
+			    "arn:aws:s3:::S3-Bucket-Name/*"
+			]
+		}
+	]
+}
